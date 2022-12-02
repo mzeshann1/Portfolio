@@ -703,3 +703,12 @@ section {
   border: 1px solid #149ddd !important;
 
 }
+
+@media screen and (max-width:708px) {
+  .info{
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  
+}
