@@ -8,6 +8,9 @@
 
     <link rel="shortcut icon" href="../assets/pic/My project-1 (1).png" type="image/x-icon">
 
+      <!-- aos css for animation -->
+  <link rel="stylesheet" href="../assets/vendor/aos/aos.css">
+
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -132,12 +135,16 @@
                     </a>
                 </div>
                 <h2 class="hh">Revolutionary Features</h2>
-                <ul class="ull">
-                        <li><strong>Home:</strong> Introduction to Edumark and featured courses.</li>
-                        <li><strong>Courses:</strong> Browse and explore available courses.</li>
-                        <li><strong>Course Details:</strong> Detailed information about a selected course.</li>
-                        <li><strong>Resources:</strong> Access course-related materials and resources.</li>
-                        <li><strong>Contact:</strong> Reach out for inquiries and support.</li>
+                <ul class="ull" >
+                        <li data-aos="fade-up" data-aos_delay="100"><strong>Home:</strong> Introduction to Edumark and featured courses.</li>
+
+                        <li data-aos="fade-up" data-aos_delay="400"><strong>Courses:</strong> Browse and explore available courses.</li>
+
+                        <li data-aos="fade-up" data-aos_delay="800"><strong>Course Details:</strong> Detailed information about a selected course.</li>
+
+                        <li data-aos="fade-up" data-aos_delay="1200"><strong>Resources:</strong> Access course-related materials and resources.</li>
+
+                        <li data-aos="fade-up" data-aos_delay="1600"><strong>Contact:</strong> Reach out for inquiries and support.</li>
                 </ul>
 
             </div>
@@ -205,12 +212,18 @@
 
 
 
-    <script src="../assets/js/project.js"></script>
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+
+
+
+
+  <script src="../assets/vendor/aos/aos.js"></script>
   <script src="../assets/js/main.js"></script>
-
-
-
-
+  <script>
+    AOS.init();
+  </script>
 
 
 

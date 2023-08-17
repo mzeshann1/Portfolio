@@ -1,3 +1,17 @@
+// Mobile nav toggle
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('mobile-nav-toggle')) {
+      document.body.classList.toggle('mobile-nav-active');
+      e.target.classList.toggle('fa-list');
+      e.target.classList.toggle('fa-times'); // Corrected class name
+    }
+  });
+});
+
+
+
 
 
 
@@ -130,15 +144,34 @@
           onscroll(document, toggleBacktotop)
         }
       
-        /**
-         * Mobile nav toggle
-         */
-        on('click', '.mobile-nav-toggle', function(e) {
-          select('body').classList.toggle('mobile-nav-active')
-          this.classList.toggle('bi-list')
-          this.classList.toggle('bi-x')
-        })
+
       
+
+
+
+
+        
+
+        
+        
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         /**
          * Scrool with ofset on links with a class name .scrollto
          */
@@ -289,10 +322,9 @@
          */
         window.addEventListener('load', () => {
           AOS.init({
-            duration: 1000,
+            duration: 100,
             easing: 'ease-in-out',
-            once: true,
-            mirror: false
+              mirror: false
           })
         });
       
@@ -300,9 +332,35 @@
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  const backToTopButton = document.querySelector(".back-to-top");
+  const whatsappButton = document.querySelector(".whatsapp");
+  const fiverrButton = document.querySelector(".fiverr");
 
+  // Function to check scroll position and show/hide buttons
+  function checkScrollPosition() {
+    if (window.scrollY > 300) {
+      backToTopButton.classList.add("show");
+      whatsappButton.classList.add("show");
+      fiverrButton.classList.add("show");
+    } else {
+      backToTopButton.classList.remove("show");
+      whatsappButton.classList.remove("show");
+      fiverrButton.classList.remove("show");
+    }
+  }
 
+  // Event listener for scroll
+  window.addEventListener("scroll", checkScrollPosition);
 
+  // Function to scroll to top
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  // Event listener for back to top button click
+  backToTopButton.addEventListener("click", scrollToTop);
+});
 
 
 
