@@ -143,34 +143,6 @@ document.addEventListener('DOMContentLoaded', function () {
           window.addEventListener('load', toggleBacktotop)
           onscroll(document, toggleBacktotop)
         }
-      
-
-      
-
-
-
-
-        
-
-        
-        
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         /**
          * Scrool with ofset on links with a class name .scrollto
