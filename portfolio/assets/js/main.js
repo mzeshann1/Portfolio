@@ -1,3 +1,8 @@
+
+
+
+
+
 // HERO type effect 
       const typedTextSpan = document.querySelector(".typed-text");
       const cursorSpan = document.querySelector(".cursor");
@@ -292,3 +297,15 @@
         });
       
       })()
+
+
+
+
+
+
+
+
+
+
+
+
