@@ -742,9 +742,7 @@ section {
   justify-content: center;
 }
 
-.h img {
-  height: 70vh;
-}
+
 
 .c {
   max-width: 1000px;
@@ -832,15 +830,16 @@ section {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   justify-content: center;
-  align-items: center;
-  z-index: 999;
+  /* align-items: center;   */
+  padding-top: 2%;
+  z-index: 99999;
 }
 
 
 .lightbox-content {
   position: relative;
   max-width: 90%;
-  max-height: 90%;
+  max-height: 100%;
   overflow: hidden;
 }
 
@@ -851,14 +850,17 @@ section {
   margin: 0 auto;
 }
 
+
+
 .close-lightbox {
   position: absolute;
   top: 10px;
-  right: 25px;
+  right: 15px;
   color: black;
-  font-size: 25px;
+  font-size: 20px;
   cursor: pointer;
 }
+
 
 
 
@@ -879,12 +881,7 @@ transition-duration: 0.6s;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 66px; /* Larger font size */
-  /* color: rgba(255, 255, 255, 0.8);  */
-  /* color: var(--bs-link-color); */
-
-  /* color: red; */
   color: blue;
-
   opacity: 0;
   transition: opacity 0.3s ease;
 }
