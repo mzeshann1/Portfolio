@@ -1,6 +1,12 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+:root{
+  --tooltip_color:yellow;
+
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
@@ -19,7 +25,9 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
-
+.tooltip_color{
+  --bs-tooltip-color:var(--tooltip_color) !important;
+}
 
 /*--------------------------------------------------------------
 # Sections General
@@ -880,13 +888,13 @@ transition-duration: 0.6s;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 66px; /* Larger font size */
+  font-size: 46px; /* Larger font size */
   color: blue;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.portfolio-lightbox-trigger:hover .lightbox-indicator {
+.portfolio-lightbox-trigger .lightbox-indicator {
   opacity: 1;
 }
 

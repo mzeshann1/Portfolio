@@ -1,4 +1,4 @@
- data-aos="fade-up" data-aos_delay="100"<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -208,27 +208,45 @@
         </div>
     </section><!-- End Contact Section -->
 
+    <section>
 
-  <!-- Back to Top Button -->
-  <a href="#" class="back-to-top" title="Back to Top"><i class="fa fa-chevron-up"></i></a>
+        <!-- Back to Top Button -->
+        <a href="#" class="back-to-top" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Back to Top"><i class="fa fa-chevron-up"></i></a>
+        
+        <!-- whatsapp buttons -->
+        <a href="https://api.whatsapp.com/send/?phone=+923042463443&text=Hi%20there" target="_blank" class="whatsapp" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Contact on Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+        
+        <!-- fiverr button to place order -->
+        <a href="https://www.fiverr.com/mzeshann?up_rollout=true" target="_blank">
+            <button class="fiverr" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Place Your Order Here!!"><i class="fa fa-shopping-cart"></i></button>
+        </a>
+        
+    </section>
+
+
+
+
+
+
+    
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/project.js"></script>
+    
+
+
   
-  <!-- whatsapp buttons -->
-<a href="https://api.whatsapp.com/send/?phone=+923042463443&text=Hi%20there" target="_blank" class="whatsapp" title="Contact on Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
-
-
-  <!-- fiverr button to place order -->
-  <a href="https://www.fiverr.com/mzeshann?up_rollout=true" target="_blank">
-    <button class="fiverr" title="Place Your Order Here!"><i class="fa fa-shopping-cart"></i></button>
-  </a>
-
-  <script src="../assets/vendor/aos/aos.js"></script>
-
-  <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/project.js"></script>
-
   <script>
+
+    // enabling the AOS library
     AOS.init();
-  </script>
+
+
+    // enabling the bootstrap tooltips
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    
+    </script>
 
 
 
