@@ -9,7 +9,53 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+          /**
+         * Navbar links active state on scroll
+         */
+        
+// Define the select function
+function select(selector, all = false) {
+  return all ? document.querySelectorAll(selector) : document.querySelector(selector);
+}
 
+// Function to add or remove 'active' class on navbar links based on scroll position
+const navbarlinksActive = () => {
+  let position = window.scrollY + 200;
+  const navbarlinks = select('#navbar .scrollto', true);
+
+  navbarlinks.forEach(navbarlink => {
+    if (!navbarlink.hash) return;
+    let section = select(navbarlink.hash);
+    if (!section) return;
+    
+    if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+      navbarlink.classList.add('active');
+    } else {
+      navbarlink.classList.remove('active');
+    }
+  });
+};
+
+// Function to handle smooth scrolling to target sections
+const smoothScrollTo = (target) => {
+  const section = select(target);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
+// Add event listeners for 'load' and 'scroll' events
+window.addEventListener('load', navbarlinksActive);
+window.addEventListener('scroll', navbarlinksActive);
+
+// Add event listener for click events on navigation links
+document.querySelectorAll('#navbar .scrollto').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = link.getAttribute('href');
+    smoothScrollTo(target);
+  });
+});
 
 
 
@@ -97,25 +143,6 @@ document.addEventListener('DOMContentLoaded', function () {
           el.addEventListener('scroll', listener)
         }
       
-        /**
-         * Navbar links active state on scroll
-         */
-        let navbarlinks = select('#navbar .scrollto', true)
-        const navbarlinksActive = () => {
-          let position = window.scrollY + 200
-          navbarlinks.forEach(navbarlink => {
-            if (!navbarlink.hash) return
-            let section = select(navbarlink.hash)
-            if (!section) return
-            if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-              navbarlink.classList.add('active')
-            } else {
-              navbarlink.classList.remove('active')
-            }
-          })
-        }
-        window.addEventListener('load', navbarlinksActive)
-        onscroll(document, navbarlinksActive)
       
         /**
          * Scrolls to an element with header offset
