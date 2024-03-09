@@ -440,7 +440,23 @@ section {
 }
 @keyframes laravel-fill{
   100%{
-      width: 75%;
+      width: 65%;
+  }
+}
+#WordPress-bar{
+  animation: WordPress-fill 2s forwards;
+}
+@keyframes WordPress-fill{
+  100%{
+      width: 85%;
+  }
+}
+#Plugin-bar{
+  animation: Plugin-fill 2s forwards;
+}
+@keyframes Plugin-fill{
+  100%{
+      width: 80%;
   }
 }
 
