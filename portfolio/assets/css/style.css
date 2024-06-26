@@ -462,10 +462,10 @@ section {
       width: 90%;
   }
 }
-#JQuery-bar{
+#laravel-bar{
   animation: laravel-fill 2s forwards;
 }
-@keyframes JQuery-fill{
+@keyframes laravel-fill{
   100%{
       width: 55%;
   }
