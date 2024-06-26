@@ -462,12 +462,12 @@ section {
       width: 90%;
   }
 }
-#laravel-bar{
+#JQuery-bar{
   animation: laravel-fill 2s forwards;
 }
-@keyframes laravel-fill{
+@keyframes JQuery-fill{
   100%{
-      width: 65%;
+      width: 55%;
   }
 }
 #WordPress-bar{
