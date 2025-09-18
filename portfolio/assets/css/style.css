@@ -454,6 +454,47 @@ section {
       width: 80%;
   }
 } 
+
+#js-bar-2{
+  animation: js-fill-2 2s forwards;
+}
+@keyframes js-fill-2{
+  100%{
+      width: 88%;
+  }
+} 
+
+
+#python-bar{
+  animation: python-bar 2s forwards;
+}
+@keyframes python-bar{
+  100%{
+      width: 85%;
+  }
+} 
+
+
+#Data{
+  animation: Data 2s forwards;
+}
+@keyframes Data{
+  100%{
+      width: 75%;
+  }
+} 
+
+
+#DevOps{
+  animation: DevOps 2s forwards;
+}
+@keyframes DevOps{
+  100%{
+      width: 75%;
+  }
+} 
+
+
 #php-bar{
   animation: php-fill 2s forwards;
 }
@@ -467,7 +508,7 @@ section {
 }
 @keyframes laravel-fill{
   100%{
-      width: 55%;
+      width: 80%;
   }
 }
 #WordPress-bar{
